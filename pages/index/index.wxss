@@ -1,0 +1,68 @@
+/* pages/index/index.wxss */
+
+.filmItem {
+  display: flex;
+  position: relative;
+  width: 708rpx;
+  height: 206rpx;
+  border-bottom: 1rpx solid #ededed;
+  margin: 25rpx auto 0 auto;
+}
+
+.filmItem > image {
+  width: 135rpx;
+  height: 187rpx;
+}
+
+.itemMain {
+  display: flex;
+  align-items: center;
+  margin-left: 21rpx;
+}
+
+.itemContent {
+  display: flex;
+  width: 400rpx;
+  
+  margin-top: -31rpx;
+  flex-direction: column;
+}
+
+.name {
+  color: #050505;
+  font-size: 13pt;
+  margin-bottom: 10rpx;
+}
+
+.type {
+  color: #7b7b7b;
+  font-size: 10pt;
+  margin-top: 7rpx;
+}
+
+.actors {
+  color: #7b7b7b;
+  text-overflow: ellipsis;
+  font-size: 10pt;
+  margin-top: 7rpx;
+}
+
+.want {
+  color: #fba400;
+  font-size: 10pt;
+  margin-top: 7rpx;
+}
+
+button {
+  position: absolute;
+  right: 21rpx;
+  width: 98rpx;
+  height: 53rpx;
+  border: 1px solid #f43d22;
+  color: #f43d22;
+  text-align: center;
+  line-height: 53rpx;
+  background-color: transparent;
+  font-size: 7pt;
+  align-items: center;
+}

@@ -1,0 +1,188 @@
+/* pages/detail/detail.wxss */
+
+.wrap {
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  width: 750rpx;
+  height: 309rpx;
+  padding: 34rpx 33rpx;
+  background-color: #332521;
+}
+
+.header > image {
+  width: 226rpx;
+  height: 309rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 33rpx;
+  color: #c7c7c2;
+  font-size: 11pt;
+}
+
+.name {
+  color: #fff;
+  font-size: 13pt;
+}
+
+.ename {
+  color: #fff;
+}
+
+.grade {
+  margin-top: 15rpx;
+}
+
+.type {
+  margin-top: 10rpx;
+}
+
+.areaAndTime {
+  margin-top: 10rpx;
+}
+
+.releaseAndupArea {
+  margin-top: 10rpx;
+}
+
+.desc {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 38rpx 29rpx;
+  background-color: #fff;
+  font-size: 10pt;
+  line-height: 45rpx;
+}
+
+.worker {
+  display: flex;
+  width: 750rpx;
+  box-sizing: border-box;
+  margin-top: 34rpx;
+  padding: 38rpx 29rpx;
+  background-color: #fff;
+  overflow-x: scroll;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 21rpx;
+}
+
+.position {
+    font-size: 12pt;
+    margin-bottom: 5rpx;
+}
+
+.otherActor {
+    margin-top: 47rpx;
+}
+
+.directorName {
+    margin-top: 10rpx;
+    font-size: 9pt;
+    text-align: center;
+}
+
+.actorName {
+    margin-top: 10rpx;
+    font-size: 9pt;
+    text-align: center;
+}
+
+.item:first-child {
+    margin-left: 0;
+}
+
+.actorItem {
+  margin-top: 48rpx;
+}
+
+.workerHead {
+  width: 143rpx;
+  height: 185rpx;
+}
+
+.boxoffice {
+    display: flex;
+    position: relative;
+    margin-top: 35rpx;
+    width: 750rpx;
+    box-sizing: border-box;
+    padding: 38rpx 29rpx;
+    background-color: #fff;
+}
+
+.boxoffice .text {
+    color: #ccc;
+}
+
+.boxoffice .number {
+    margin-left: 60rpx;
+    color: #f14d41;
+    font-size: 17pt;
+}
+
+.boxoffice .now {
+    position: absolute;
+    bottom: 13rpx;
+    right: 20rpx;
+    /*align-items: flex-end;*/
+    font-size: 10pt;
+    color: #ccc;
+}
+
+.images {
+
+    width: 750rpx;
+    padding: 38rpx 29rpx;
+    background-color: #fff;
+ 
+    margin-top: 35rpx;  
+}
+
+.images .title {
+    font-size: 10pt;
+    color: #0a0a0a;
+}
+
+.images .all {
+    width: 750rpx;
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 15rpx;
+}
+
+.images .all image {
+    width: 337rpx;
+    height: 182rpx;
+    margin-left: 20rpx;
+}
+
+.images .all image:first-child {
+    margin-left: 0;
+}
+
+.btnPlaceHolder {
+  width: 750rpx;
+  height: 104rpx;
+}
+
+.buyBtn {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  height: 104rpx;
+  text-align: center;
+  line-height: 104rpx;
+  font-size: 11pt;
+  color: #fff;
+  background-color: #f14d41;
+  border-radius: 0;
+}

@@ -1,0 +1,28 @@
+
+<view class="header">
+  <view wx:if="{{isShowError}}" class="error">{{errorInfo}}</view>
+  <image src="../images/login_head.png"></image>
+  <text>手机账户登录</text>
+</view>
+
+<view class="loginForm">
+
+  <view class="inputArea">
+
+    <view class="inputRow">
+      <label>用户名:</label><input placeholder="手机号" type="text" 
+      bindinput="inputEvent" />
+    </view>
+    
+    <view class="inputRow">
+      <label>密 码:</label>
+      <input placeholder="密码" type="password" bindblur="passBlurEvent" />
+    </view>
+
+  </view>
+
+  <button bindtap="loginEvent">登陆</button>
+
+</view>
+
+<view class="register" bindtap="regEvent">立即注册</view>

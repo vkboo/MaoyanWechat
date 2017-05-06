@@ -1,0 +1,26 @@
+
+<!--pages/phone/phone.wxml-->
+<template name="reg">
+  <view class="wrap">
+    <view wx:if="{{showError}}" class="error">{{errorInfo}}</view>
+    <view class="nav">
+      <text class="phoneStep">输入手机号码</text>
+      <text class="phoneStep">· · ·</text>
+      <text class="codeStep">输入验证码</text>
+      <text class="codeStep">· · ·</text>
+      <text class="pwdStep">设置密码</text>
+    </view>
+    <view wx:key="item.id" wx:for="{{rows}}" class="inputRow">
+      <label>{{item.labelVal}}</label>
+      <input type="number" data-diyid="{{index}}" placeholder="{{item.placeHolderVal}}" bindblur="blurEvent" password="{{isPwd}}"/>
+    </view>
+    <view class="btn">
+      <button disabled="{{btnDisable}}" bindtap="next">{{btnVal}}</button>
+    </view>
+    <view wx:if="{{isShowDeal}}" class="deal">
+      <checkbox value="value" checked="false" />
+      <text class="agree">我已阅读并同意<text class="meituan">美团网用户协议</text>
+      </text>
+    </view>
+  </view>
+</template>

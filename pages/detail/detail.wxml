@@ -1,0 +1,51 @@
+<view class="wrap">
+  <view class="header">
+
+    <!--left-->
+    <image src="http://127.0.0.1:3000/images/{{indexImg[0]}}"></image>
+
+    <!--right-->
+    <view class="info">
+      <text class="name">{{filmName}}</text>
+      <text class="ename">{{filmEname}}</text>
+      <text class="grade">评分 {{grade}}</text>
+      <text class="type">{{type}}</text>
+      <text class="areaAndTime">{{area}} / {{time}}</text>
+      <text class="releaseAndupArea">{{release}}{{upArea}}上映 ></text>
+    </view>
+  </view>
+  <view class="desc">{{desc}}</view>
+  <view class="worker">
+    <view class="item">
+      <text class="position">导演</text>
+      <image class="workerHead" src="http://127.0.0.1:3000/images/{{directorImg[0]}}"></image>
+      <text class="directorName">{{directorName}}</text>
+    </view>
+    <view class="item" wx:for="{{actorsName}}" wx:key="*this">
+      <block wx:if="{{index == 0}}">
+        <text class="position">演员</text>
+        <image class="workerHead" src="http://127.0.0.1:3000/images/{{actorsImg[index]}}"></image>
+        <text class="actorName">{{actorsName[index]}}</text>
+      </block>
+      <block wx:else>
+        <image class="workerHead otherActor" src="http://127.0.0.1:3000/images/{{actorsImg[index]}}"></image>
+        <text class="actorName">{{actorsName[index]}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="boxoffice">
+    <text class="text">票房</text>
+    <text class="number">{{boxoffice}}</text>
+    <text class="now">截至2016-12-4 12:00(系统时间)</text>
+  </view>
+  <view class="images">
+    <view class="title">电影和剧照</view>
+    <view class="all">
+      <block wx:for="{{filmImg}}" wx:key="*this">
+        <image src="http://127.0.0.1:3000/images/{{filmImg[index]}}"></image>
+      </block>
+    </view>
+  </view>
+  <view class="btnPlaceHolder"></view>
+  <button data-id="{{indexImg[0]}}" class="buyBtn" bindtap="buyEvent">立即购票</button>
+</view>

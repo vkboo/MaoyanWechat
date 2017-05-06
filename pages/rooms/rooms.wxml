@@ -1,0 +1,27 @@
+<view class="wrap">
+    <view class="cinema">
+        <text class="name">{{cinema.name}}</text>
+        <text class="address">{{cinema.address}}</text>
+        <text class="tel">电话 {{cinema.tel}}</text>
+    </view>
+
+    <view class="film">
+        <view class="image">
+            <image src="http://127.0.0.1:3000/images/{{indexImg}}"></image>
+        </view>
+        <view class="desc">
+            <text class="name">{{film.name}}<text class="grade"> {{film.grade}}</text></text>
+            <text class="boxoffice">票房：{{film.money}}</text>
+        </view>
+    </view>
+
+    <view class="rooms">
+        <view class="item" wx:for="{{rooms}}" wx:key="*this">
+            <text class="time">{{item.time}}</text>
+            <text class="room">{{item.room}}</text>
+            <text class="price">{{item.price}}元</text>
+            <button class="buyBtn">选座购票</button>
+        </view>
+        
+    </view>
+</view>

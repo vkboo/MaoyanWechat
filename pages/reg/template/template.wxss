@@ -1,0 +1,83 @@
+/* pages/phone/phone.wxss */
+
+.wrap {
+  width: 750rpx;
+  height: 1333rpx;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  padding-top: 45rpx;
+}
+
+.nav {
+  font: 12pt "Microsoft Yahei";
+  color: #a0a0a0;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.inputRow {
+  margin-top: 40rpx;
+  position: relative;
+  font: 12pt "Microsoft Yahei";
+}
+
+.inputRow label {
+  position: absolute;
+  top: 30rpx;
+  left: 34rpx;
+  color: 010101;
+}
+
+.inputRow input {
+  width: 750rpx;
+  height: 103rpx;
+  border-top: 2rpx solid #f2f2f2;
+  border-bottom: 2rpx solid #f2f2f2;
+  background-color: #fff;
+  padding-left: 185rpx;
+}
+
+.btn {
+    margin-top: 61rpx;
+}
+
+.btn button {
+    background-color: #db403b;
+    width: 686rpx;
+    height: 93rpx;
+    color: #fff;
+    border: 1rpx solid #f1e6d0;
+}
+
+.deal {
+    margin-top: 20rpx;
+    display: flex;
+}
+
+.deal checkbox {
+    margin-left: 31rpx;
+}
+
+.deal .agree {
+    margin-left: 20rpx;
+    color: #5c5c5c;
+    margin-top: 7rpx;
+    font: 11pt "Microsoft Yahei";
+}
+
+.deal .meituan {
+    color: #0197f0;
+}
+
+.error {
+    width: 750rpx;
+    height: 45rpx;
+    background-color: #cc0000;
+    text-align: center;
+    font: 11pt Roboto;
+    margin-top: -45rpx;
+    color: #fff;
+    line-height: 45rpx;
+}
+

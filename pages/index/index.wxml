@@ -1,0 +1,31 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:key="{{*this}}" wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="filmsList">
+  <view wx:key="{{*this}}" wx:for="{{filmsData}}" class="filmItem" 
+  bindtap="goDetailEvent" data-id="{{item._id}}">
+
+    <!--left-->
+        <!--<image src="http://127.0.0.1:3000/images/{{item.indexImg[0]}}"></image>-->
+    <image src="http://127.0.0.1:3000/images/{{item.indexImg[0]}}"></image>
+
+    <!--right-->
+    <view class="itemMain">
+
+      <!--l-->
+      <view class="itemContent">
+        <text class="name">{{item.name}}</text>
+        <text class="type">{{item.type}}</text>
+        <text class="actors">{{item.actor}}</text>
+        <text class="want">{{item.want}}人想看</text>
+      </view>
+
+      <!--r-->
+      <button catchtap="goCinemaEvent" data-id="{{item.indexImg[0]}}">购票</button>
+    </view>
+  </view>
+</view>

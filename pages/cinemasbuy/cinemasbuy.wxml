@@ -1,0 +1,7 @@
+<view class="item" wx:key="*this" wx:for="{{data.cinemas}}" data-id="{{data._id}}" data-index="{{index}}"  bindtap="clickEvent" >
+    <text class="name">{{item.cinema.name}}</text>
+    <text class="address">{{item.cinema.address}}</text>
+    <text class="tel">{{item.cinema.tel}}</text>
+    <text class="website">{{item.cinema.website}}</text>
+</view>
+

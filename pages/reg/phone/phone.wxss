@@ -1,0 +1,5 @@
+@import "../template/template.wxss";
+
+.phoneStep {
+  color: #dc4644;
+}
