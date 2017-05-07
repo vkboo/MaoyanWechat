@@ -1,6 +1,6 @@
 {
   "pages": [
-
+"pages/mine/mine",
      "pages/index/index",
     "pages/login/login",
     "pages/rooms/rooms",
@@ -8,7 +8,7 @@
     "pages/detail/detail",
    
     
-    "pages/mine/mine",
+    
     "pages/cinemas/cinemas",
     
     "pages/reg/phone/phone",

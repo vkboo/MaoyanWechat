@@ -1,2 +1,19 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="wrap">
+    <!--我的资料 改密-->
+    <view class="profile">
+        <image src="/pages/images/mine-head.png"></image>
+        <view class="name">
+            <text class="acc">15298063361</text>
+            <text class="level">v1 普通会员</text>
+        </view>
+        <view class="right">></view>
+    </view>
+    <!--我的订单-->
+    <view class="orders">
+        <text class="orderTitle">我的订单</text>
+        <view class="item">
+
+        </view>
+    </view>
+</view>

@@ -1,1 +1,44 @@
 /* pages/mine/mine.wxss */
+.wrap {
+    background-color: #ECECEC;
+}
+
+.profile {
+    display: flex;
+    width: 750rpx;
+    height: 230rpx;
+    box-sizing: border-box;
+    padding: 0 36rpx;
+    background-color: #d33e37;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.profile image {
+    width: 134rpx;
+    height: 135rpx;
+}
+
+.profile .name {
+    display: flex;
+    flex-direction: column;
+    margin-left: -226rpx;
+}
+
+.acc {
+    font-size: 11pt;
+}
+
+.level {
+    font-size: 10pt;
+    padding: 2rpx;
+    border: 1rpx solid #fff;
+    padding-left:19rpx;
+    border-radius: 50rpx;
+    margin-top: 10rpx;
+}
+
+.orders {
+    margin-top: 20rpx;
+}
