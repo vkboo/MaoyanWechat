@@ -1,8 +1,11 @@
 // pages/cinemas/cinemas.js
 Page({
-  data:{},
+  data:{
+    data: [] // 电影院数组
+  },
   onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+    // 获取本页的全部数据
+    this.getData();
   },
   onReady:function(){
     // 页面渲染完成
@@ -15,5 +18,20 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
-  }
+  },
+   // 获取本页的全部数据
+   getData: function() {
+     wx.request({
+       url: 'http://127.0.0.1:3000/cinemas/find',
+       data: {},
+       method: 'GET', 
+       success: (res) => {
+         console.log('origin',res.data)
+          this.setData({
+            data: res.data
+          })
+          console.log(this.data.data)
+       }
+     })
+   }
 })

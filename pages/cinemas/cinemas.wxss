@@ -1,1 +1,31 @@
 /* pages/cinemas/cinemas.wxss */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  padding: 44rpx;
+  border-bottom: 10rpx solid #d4d4d4;
+}
+
+.name {
+  color: #202020;
+}
+
+.address {
+    margin-top: 5rpx;
+  font-size: 11pt;
+  color: #626262;
+}
+
+.tel {
+    margin-top: 10rpx;
+  font-size: 11pt;
+  color: #a09c9c;
+}
+
+.website {
+    margin-top: 5rpx;
+  font-size: 11pt;
+  color: #a09c9c;
+}

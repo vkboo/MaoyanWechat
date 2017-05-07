@@ -1,2 +1,6 @@
-<!--pages/cinemas/cinemas.wxml-->
-<text>pages/cinemas/cinemas.wxml</text>
+<view class="item" wx:key="*this" wx:for="{{data}}" data-id="{{data._id}}" data-index="{{index}}" bindtap="clickEvent">
+  <text class="name">{{item.name}}</text>
+  <text class="address">{{item.address}}</text>
+  <text class="tel">{{item.tel}}</text>
+  <text class="website">{{item.website}}</text>
+</view>

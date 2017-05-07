@@ -48,7 +48,6 @@ Page({
         var data = app.formatImgPath(res.data);
         // 演员格式化以逗号分隔
         var acotrs = formatActors(res.data);
-        console.log('演员',acotrs)
         this.setData({
           filmsData: data,
           actors: acotrs

@@ -1,1 +1,6 @@
-{}
+{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#db403b",
+    "navigationBarTitleText": "影院浏览",
+    "navigationBarTextStyle":"white"
+}
