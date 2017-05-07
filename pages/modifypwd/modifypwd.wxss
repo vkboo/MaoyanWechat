@@ -1,0 +1,53 @@
+/* pages/modifypwd/modifypwd.wxss */
+.wrap {
+    background-color: #f5f5f5;
+}
+
+.header {
+    width: 750rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    background-color: #cc0000;
+    color: #fff;
+    text-align: center;
+    font-size: 12pt;
+}
+
+form {
+padding: 10rpx 20rpx 0 20rpx;
+}
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  height: 104rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+  line-height: 104rpx;
+  background-color: #fff;
+}
+
+.inputRow label {
+  color: #101010;
+  font: 12pt "Microsoft Yahei";
+  width: 155rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  text-align: right;
+  font-weight: 600;
+}
+
+.inputRow input {
+  box-sizing: border-box;
+  padding-left: 40rpx;
+  height: 104rpx;
+}
+
+button {
+  display: block;
+  width: 688rpx;
+  height: 95rpx;
+  margin: 65rpx auto 0 auto;
+  border-radius: 10rpx;
+  color: #fff;
+  background-color: #f14d41;
+}

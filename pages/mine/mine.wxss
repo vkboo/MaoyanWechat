@@ -1,44 +1,131 @@
 /* pages/mine/mine.wxss */
+
 .wrap {
-    background-color: #ECECEC;
+  background-color: #ececec;
 }
 
 .profile {
-    display: flex;
-    width: 750rpx;
-    height: 230rpx;
-    box-sizing: border-box;
-    padding: 0 36rpx;
-    background-color: #d33e37;
-    align-items: center;
-    color: #fff;
-    justify-content: space-between;
+  display: flex;
+  width: 750rpx;
+  height: 230rpx;
+  box-sizing: border-box;
+  padding: 0 36rpx;
+  background-color: #d33e37;
+  align-items: center;
+  color: #fff;
+  justify-content: space-between;
 }
 
 .profile image {
-    width: 134rpx;
-    height: 135rpx;
+  width: 134rpx;
+  height: 135rpx;
 }
 
 .profile .name {
-    display: flex;
-    flex-direction: column;
-    margin-left: -226rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: -226rpx;
 }
 
 .acc {
-    font-size: 11pt;
+  font-size: 11pt;
 }
 
 .level {
-    font-size: 10pt;
-    padding: 2rpx;
-    border: 1rpx solid #fff;
-    padding-left:19rpx;
-    border-radius: 50rpx;
-    margin-top: 10rpx;
+  font-size: 10pt;
+  padding: 2rpx;
+  border: 1rpx solid #fff;
+  padding-left: 19rpx;
+  border-radius: 50rpx;
+  margin-top: 10rpx;
 }
 
-.orders {
-    margin-top: 20rpx;
+.orderTitle {
+  display: block;
+  width: 750rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 12pt;
+  color: #1c1c1c;
+  font-weight: 500;
+  padding-left: 19rpx;
+  background-color: #fff;
+  padding-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 5rpx;
+  width: 750rpx;
+  height: 395rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #d8d8d8;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.cinemaName {
+  height: 76rpx;
+  width: 715rpx;
+  line-height: 76rpx;
+  color: #7d7d7d;
+  font-size: 12pt;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 233rpx;
+  width: 715rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24rpx;
+    font-size: 11pt;
+    color: #707070;
+}
+
+.fname {
+    margin-top: -25rpx;
+    font-size: 12pt;
+    color: #080808;
+}
+
+.ftime {
+    margin-top: 15rpx;
+}
+
+.fseat {
+    margin-top: 5rpx;
+}
+
+.main image {
+  width: 134rpx;
+  height: 189rpx;
+}
+
+.cancel {
+    border: 1rpx solid #f56754;
+    width: 136rpx;
+    height: 61rpx;
+    background: transparent;
+    font-size: 7pt;
+    line-height: 61rpx;
+    color: #f56754;
+    margin-right: 46rpx;
+}
+
+.totalPrice {
+  height: 76rpx;
+  width: 715rpx;
+  line-height: 76rpx;
+  color: #7d7d7d;
+  font-size: 12pt;
 }

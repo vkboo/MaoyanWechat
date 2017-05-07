@@ -1,16 +1,15 @@
 {
   "pages": [
-"pages/mine/mine",
-     "pages/index/index",
     "pages/login/login",
+    "pages/mine/mine",
+    "pages/modifypwd/modifypwd",
+    
+    "pages/index/index",
+    
     "pages/rooms/rooms",
-        "pages/cinemasbuy/cinemasbuy",
+    "pages/cinemasbuy/cinemasbuy",
     "pages/detail/detail",
-   
-    
-    
     "pages/cinemas/cinemas",
-    
     "pages/reg/phone/phone",
     "pages/reg/code/code",
     "pages/reg/password/password"

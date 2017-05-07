@@ -1,10 +1,10 @@
-// pages/mine/mine.js
+// pages/modifypwd/modifypwd.js
 Page({
   data: {
-    username: ''
+    user: {}
   },
   onLoad: function (options) {
-    // 取得用户_id
+    // 页面初始化 options为页面跳转所带来的参数
     wx.getStorage({
       key: 'user',
       success: (res) => {
@@ -13,7 +13,7 @@ Page({
           data: {_id: res.data},
           success: (res) => {
             this.setData({
-              username: res.data.acc
+              user: res.data
             })
           }
         })
@@ -22,6 +22,7 @@ Page({
   },
   onReady: function () {
     // 页面渲染完成
+    console.log('得到当前用户对象',this.data.user)
   },
   onShow: function () {
     // 页面显示
@@ -31,11 +32,5 @@ Page({
   },
   onUnload: function () {
     // 页面关闭
-  },
-  // 进入修改密码页
-  modifyPwd: function () {
-    wx.navigateTo({
-      url: '/pages/modifypwd/modifypwd'
-    })
   }
 })

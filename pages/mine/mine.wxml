@@ -1,10 +1,10 @@
 <!--pages/mine/mine.wxml-->
 <view class="wrap">
     <!--我的资料 改密-->
-    <view class="profile">
+    <view class="profile" bindtap="modifyPwd">
         <image src="/pages/images/mine-head.png"></image>
         <view class="name">
-            <text class="acc">15298063361</text>
+            <text class="acc">{{username}}</text>
             <text class="level">v1 普通会员</text>
         </view>
         <view class="right">></view>
@@ -12,8 +12,47 @@
     <!--我的订单-->
     <view class="orders">
         <text class="orderTitle">我的订单</text>
-        <view class="item">
 
+        <view class="order-item">
+            <text class="cinemaName">大世界电影城</text>
+            <view class="main">
+                <image src="/pages/images/orderImage.png"></image>
+                <view class="content">
+                    <text class="fname">西游伏妖篇</text>
+                    <text class="ftime">2月2日 13:50</text>
+                    <text class="fseat">四号厅 9排3座</text>
+                </view>
+                <button class="cancel">取消订单</button>
+            </view>
+            <text class="totalPrice">总价：125.8元</text>
+        </view>
+
+        <view class="order-item">
+            <text class="cinemaName">大世界电影城</text>
+            <view class="main">
+                <image src="/pages/images/orderImage.png"></image>
+                <view class="content">
+                    <text class="fname">西游伏妖篇</text>
+                    <text class="ftime">2月2日 13:50</text>
+                    <text class="fseat">四号厅 9排3座</text>
+                </view>
+                <button class="cancel">取消订单</button>
+            </view>
+            <text class="totalPrice">总价：125.8元</text>
+        </view>
+
+        <view class="order-item">
+            <text class="cinemaName">大世界电影城</text>
+            <view class="main">
+                <image src="/pages/images/orderImage.png"></image>
+                <view class="content">
+                    <text class="fname">西游伏妖篇</text>
+                    <text class="ftime">2月2日 13:50</text>
+                    <text class="fseat">四号厅 9排3座</text>
+                </view>
+                <button class="cancel">取消订单</button>
+            </view>
+            <text class="totalPrice">总价：125.8元</text>
         </view>
     </view>
 </view>

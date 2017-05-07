@@ -1,0 +1,18 @@
+<view class="wrap">
+    <view class="header">Error</view>
+  <form>
+    <view class="inputRow">
+      <label>原密码:</label>
+      <input type="password" />
+    </view>
+    <view class="inputRow">
+      <label>新密码:</label>
+      <input type="password" />
+    </view>
+    <view class="inputRow">
+      <label>确认密码:</label>
+      <input type="password" />
+    </view>
+    <button>确认修改</button>
+  </form>
+</view>
