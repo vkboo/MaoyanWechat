@@ -20,7 +20,6 @@ Page({
     directorName: '',
     actorsName: []
   },
-  // zhaobo's branch
   onLoad: function (options) {
     this.getData(options.id);
   },

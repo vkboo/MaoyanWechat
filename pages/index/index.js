@@ -1,4 +1,12 @@
 var app = getApp();
+// 演员格式化以逗号分隔
+var formatActors = function(allData) {
+    var actorsArr = [];
+    for (let i = 0; i < allData.length; i++) {
+      actorsArr.push(allData[i].actors.split('|').join(','));
+    }
+    return actorsArr;
+}
 Page({
   data: {
     imgUrls: [
@@ -10,7 +18,8 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    filmsData: [] // 页面的电影数据
+    filmsData: [], // 页面的电影数据
+    actors: '' // 演员数据
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -37,8 +46,12 @@ Page({
       success: function (res) {
         // 图片文件路径的转换
         var data = app.formatImgPath(res.data);
+        // 演员格式化以逗号分隔
+        var acotrs = formatActors(res.data);
+        console.log('演员',acotrs)
         this.setData({
-          filmsData: data
+          filmsData: data,
+          actors: acotrs
         })
       }.bind(this)
     })

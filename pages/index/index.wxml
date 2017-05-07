@@ -21,7 +21,7 @@
         <text class="name">{{item.name}}</text>
         <text class="type">{{item.type}}</text>
         <text class="actors">{{item.actor}}</text>
-        <text class="want">{{item.want}}人想看</text>
+        <text class="actors">主演：{{actors[index]}}</text>
       </view>
 
       <!--r-->
