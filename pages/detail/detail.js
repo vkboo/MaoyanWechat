@@ -20,8 +20,8 @@ Page({
     directorName: '',
     actorsName: []
   },
+  // zhaobo's branch
   onLoad: function (options) {
-    // var options = '590c0d83eeab3e1114c8a29a';
     this.getData(options.id);
   },
   onReady: function () {
