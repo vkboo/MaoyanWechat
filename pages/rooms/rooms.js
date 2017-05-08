@@ -1,4 +1,5 @@
 var app = getApp();
+var matchIdAndIndex;
 // 格式化首页图片路径
 var formatIndexImgPath = function (path) {
   let index = path.indexOf('\\');
@@ -13,6 +14,10 @@ Page({
     indexImg: ''
   },
   onLoad: function (options) {
+    matchIdAndIndex = {
+      id: options.id,
+      cinemaIndex: options.index // 院线在其中的索引
+    }
     this.getData(options.id,options.index);
   },
   onReady: function () {
@@ -45,5 +50,12 @@ Page({
       },
     })
   },
+  // 选座购票
+  chooseSeat: function(e) {
+    var roomIndex = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: `/pages/seats/seats?id=${matchIdAndIndex.id}&cinemaIndex=${matchIdAndIndex.cinemaIndex}&roomIndex=${roomIndex}`
+    })
+  }
 
 })

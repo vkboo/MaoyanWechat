@@ -13,46 +13,18 @@
     <view class="orders">
         <text class="orderTitle">我的订单</text>
 
-        <view class="order-item">
-            <text class="cinemaName">大世界电影城</text>
+        <view wx:key="{{d_item.name}}" wx:for="{{orders}}" class="order-item">
+            <text class="cinemaName">{{item.cinemaName}}</text>
             <view class="main">
-                <image src="/pages/images/orderImage.png"></image>
+                <!--<image src="http://127.0.0.1/images/{{pathArr[index]}}"></image>-->
                 <view class="content">
-                    <text class="fname">西游伏妖篇</text>
-                    <text class="ftime">2月2日 13:50</text>
-                    <text class="fseat">四号厅 9排3座</text>
+                    <text class="fname">{{item.name}}</text>
+                    <text class="ftime">{{item.time}}</text>
+                    <text class="fseat">{{item.roomName}} {{item.seats}}</text>
                 </view>
                 <button class="cancel">取消订单</button>
             </view>
-            <text class="totalPrice">总价：125.8元</text>
-        </view>
-
-        <view class="order-item">
-            <text class="cinemaName">大世界电影城</text>
-            <view class="main">
-                <image src="/pages/images/orderImage.png"></image>
-                <view class="content">
-                    <text class="fname">西游伏妖篇</text>
-                    <text class="ftime">2月2日 13:50</text>
-                    <text class="fseat">四号厅 9排3座</text>
-                </view>
-                <button class="cancel">取消订单</button>
-            </view>
-            <text class="totalPrice">总价：125.8元</text>
-        </view>
-
-        <view class="order-item">
-            <text class="cinemaName">大世界电影城</text>
-            <view class="main">
-                <image src="/pages/images/orderImage.png"></image>
-                <view class="content">
-                    <text class="fname">西游伏妖篇</text>
-                    <text class="ftime">2月2日 13:50</text>
-                    <text class="fseat">四号厅 9排3座</text>
-                </view>
-                <button class="cancel">取消订单</button>
-            </view>
-            <text class="totalPrice">总价：125.8元</text>
+            <text class="totalPrice">总价：{{item.price}}元</text>
         </view>
     </view>
 </view>

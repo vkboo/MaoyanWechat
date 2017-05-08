@@ -62,104 +62,151 @@
 }
 
 .preview {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .screen {
-    width: 444rpx;
-    display: flex;
-    margin: 0 auto;
-    position: relative;
+  width: 444rpx;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
 }
 
 .s-left {
-    position: absolute;
-    left: 0rpx;
+  position: absolute;
+  left: 0rpx;
 }
 
 .s-right {
-    position: absolute;
-    right: 0rpx;
+  position: absolute;
+  right: 0rpx;
 }
 
 .roomName {
-    width: 390rpx;
-    height: 43rpx;
-    background-color: #dcdcdc;
-    text-align:center;
-    margin: 0 auto;
-    color: #636363;
-    font-size: 9pt;
-    line-height: 43rpx;
+  width: 390rpx;
+  height: 43rpx;
+  background-color: #dcdcdc;
+  text-align: center;
+  margin: 0 auto;
+  color: #636363;
+  font-size: 9pt;
+  line-height: 43rpx;
 }
 
-
 .screen image {
-    width: 27rpx;
-    height: 45rpx;
+  width: 27rpx;
+  height: 45rpx;
 }
 
 .seatsShow {
-    margin-left: 30rpx;
+  margin-left: 30rpx;
 }
 
 .seatsShow image {
-    margin-left: 12rpx;
+  margin-left: 12rpx;
 }
 
 .main {
-    display: flex;
-    margin-top: 40rpx;
-    height: 611rpx;
-    /*justify-content: space-between;*/
+  display: flex;
+  margin-top: 40rpx;
+  height: 611rpx;
 }
 
 .main image {
-    width: 45rpx;
+  width: 45rpx;
   height: 41rpx;
 }
 
 .rowsShow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 34rpx;
-    height: 549rpx;
-    background-color: #a8a8a8;
-    border-radius: 30rpx;
-    margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 34rpx;
+  height: 549rpx;
+  background-color: #a8a8a8;
+  border-radius: 30rpx;
+  margin-left: 20rpx;
 }
 
 .rowsShow text {
-    font-size: 10pt;
-    color: #fff;
-    
+  font-size: 10pt;
+  color: #fff;
 }
 
 .buy {
   position: fixed;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   width: 750rpx;
   box-sizing: border-box;
   padding: 12rpx 26rpx;
-  height: 112rpx;
+  height: 224rpx;
   border-top: 1rpx solid #eee;
 }
 
 .buy text {
-    font-size: 11pt;
-    color: #626262;
+  font-size: 11pt;
+  color: #626262;
 }
 
 .buy button {
-    width: 313rpx;
-    height: 77rpx;
-    background-color: #f5ddb1;
-    color: #fff;
-    line-height: 77rpx;
-    margin-right: 0;
+  width: 313rpx;
+  height: 77rpx;
+  background-color: #f5ddb1;
+  color: #fff;
+  line-height: 77rpx;
+  margin-right: 0;
+}
+
+.up {
+  width: 750rpx;
+  height: 111rpx;
+  border-bottom: 1rpx solid #eee;
+  line-height: 111rpx;
+  text-align: center;
+}
+
+.down {
+  width: 750rpx;
+  height: 111rpx;
+  box-sizing: border-box;
+  padding: 0 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+.buy .down .price {
+  color: red;
+  font-size: 16pt;
+}
+
+/*座位相关*/
+
+label {
+  display: inline-block;
+  width: 45rpx;
+  height: 41rpx;
+  margin-right: 15rpx;
+}
+
+.selecting {
+  background: url('/pages/images/selecting.png') no-repeat;
+  background-size: 45rpx 41rpx;
+}
+
+.noseat {
+  background: url('/pages/images/blank.png') no-repeat;
+  background-size: 45rpx 41rpx;
+}
+
+.saled {
+  background: url('/pages/images/sealed.png') no-repeat;
+  background-size: 45rpx 41rpx;
+}
+
+.selected {
+  background: url('/pages/images/selected.png') no-repeat;
+  background-size: 45rpx 41rpx;
 }

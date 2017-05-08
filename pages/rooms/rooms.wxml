@@ -16,7 +16,7 @@
     </view>
 
     <view class="rooms">
-        <view class="item" wx:for="{{rooms}}" wx:key="*this">
+        <view bindtap="chooseSeat" class="item" wx:for="{{rooms}}" wx:key="*this" data-index="{{index}}">
             <text class="time">{{item.time}}</text>
             <text class="room">{{item.room}}</text>
             <text class="price">{{item.price}}元</text>

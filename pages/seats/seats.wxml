@@ -1,10 +1,10 @@
 
 <!--pages/seats/seats.wxml-->
 <view class="cinema">
-  <text class="cinemaName">太平洋影城</text>
+  <text class="cinemaName">{{cinemaName}}</text>
   <view class="timeAndRoom">
-    <text class="time">17:30</text>
-    <text class="room">IMAX</text>
+    <text class="time">{{playTime}}</text>
+    <text class="room">{{roomName}}</text>
   </view>
 </view>
 <view class="explain">
@@ -28,40 +28,33 @@
       IMAX
     </view>
     <image class="s-right" src="/pages/images/s-right.png"></image>
-</view>
-    <view class="main">
+  </view>
+  <view class="main">
 
     <!--left-->
     <view class="rowsShow">
-      <text>1</text>
-      <text>2</text>
-      <text>3</text>
-      <text>4</text>
-      <text>5</text>
-      <text>6</text>
-      <text>7</text>
-      <text>8</text>
-      <text>9</text>
-      <text>10</text>
-      <text>11</text>
+      <text wx:key="t_{{index}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}">{{item}}</text>
     </view>
 
     <!--right-->
     <view class="seatsShow">
 
       <!--15 * 11-->
-      <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" wx:key="*this" class="row">
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
-        <image src="/pages/images/selecting.png"></image>
+      <view wx:for="{{seatsArr}}" wx:key="i_{{outterIndex}}" class="row" wx:for-index="outterIndex">
+        <block wx:key="j_{{outterIndex}}" wx:for="{{item}}">
+
+          <!--可选-->
+          <label bindtap="chooseSeat" data-flag="{{item}}" data-outterIndex="{{outterIndex}}" class="selecting" data-innerIndex="{{index}}" wx:if="{{item == 1}}"></label>
+
+          <!--没座-->
+          <label wx:elif="{{item == 0}}" class="noseat"></label>
+
+          <!--已售-->
+          <label wx:elif="{{item == 3}}" class="saled"></label>
+
+          <!--已选-->
+          <label bindtap="chooseSeat" data-flag="{{item}}" wx:elif="{{item == 2}}" data-outterIndex="{{outterIndex}}" data-innerIndex="{{index}}" class="selected"></label>
+        </block>
       </view>
     </view>
   </view>
@@ -69,6 +62,9 @@
 
 <!--fixed-->
 <view class="buy">
-  <text>一次性最多选五个座位</text>
-  <button>请先选座</button>
+  <text class="up">{{seatDirection}}</text>
+  <view class="down">
+    <text class="price">{{price}}元</text>
+    <button disabled="{{isBtnDisable}}" bindtap="buyEvent" style="background-color: {{btnSty}}">{{btnString}}</button>
+  </view>
 </view>
