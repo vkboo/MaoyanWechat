@@ -5,7 +5,7 @@
         <image src="/pages/images/mine-head.png"></image>
         <view class="name">
             <text class="acc">{{username}}</text>
-            <text class="level">v1 普通会员</text>
+            <text class="level" catchtap="logout">退出登录</text>
         </view>
         <view class="right">></view>
     </view>

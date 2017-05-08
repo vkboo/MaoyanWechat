@@ -1,0 +1,74 @@
+
+<!--pages/seats/seats.wxml-->
+<view class="cinema">
+  <text class="cinemaName">太平洋影城</text>
+  <view class="timeAndRoom">
+    <text class="time">17:30</text>
+    <text class="room">IMAX</text>
+  </view>
+</view>
+<view class="explain">
+  <view class="item">
+    <image src="/pages/images/selecting.png"></image>
+    <text class="text">可选</text>
+  </view>
+  <view class="item">
+    <image src="/pages/images/sealed.png"></image>
+    <text class="text">已售</text>
+  </view>
+  <view class="item">
+    <image src="/pages/images/selected.png"></image>
+    <text class="text">已选</text>
+  </view>
+</view>
+<view class="preview">
+  <view class="screen">
+    <image class="s-left" src="/pages/images/s-left.png"></image>
+    <view class="roomName">
+      IMAX
+    </view>
+    <image class="s-right" src="/pages/images/s-right.png"></image>
+</view>
+    <view class="main">
+
+    <!--left-->
+    <view class="rowsShow">
+      <text>1</text>
+      <text>2</text>
+      <text>3</text>
+      <text>4</text>
+      <text>5</text>
+      <text>6</text>
+      <text>7</text>
+      <text>8</text>
+      <text>9</text>
+      <text>10</text>
+      <text>11</text>
+    </view>
+
+    <!--right-->
+    <view class="seatsShow">
+
+      <!--15 * 11-->
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" wx:key="*this" class="row">
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+        <image src="/pages/images/selecting.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--fixed-->
+<view class="buy">
+  <text>一次性最多选五个座位</text>
+  <button>请先选座</button>
+</view>

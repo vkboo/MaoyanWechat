@@ -10,12 +10,17 @@ Page({
       success: (res) => {
         wx.request({
           url: 'http://127.0.0.1:3000/users/find',
-          data: {_id: res.data},
+          data: { _id: res.data },
           success: (res) => {
             this.setData({
               username: res.data.acc
             })
           }
+        })
+      },
+      fail: function (res) {
+        wx.navigateTo({
+          url: '/pages/login/login'
         })
       }
     })
@@ -37,5 +42,16 @@ Page({
     wx.navigateTo({
       url: '/pages/modifypwd/modifypwd'
     })
+  },
+  // 退出登录
+  logout: function () {
+    try {
+      wx.removeStorageSync('user');
+      wx.navigateTo({
+          url: '/pages/login/login'
+        })
+    } catch (e) {
+      // Do something when catch error
+    }
   }
 })

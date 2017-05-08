@@ -1,18 +1,18 @@
 <view class="wrap">
-    <view class="header">Error</view>
-  <form>
+    <view wx:if="{{isShowError}}" class="header">{{errorInfo}}</view>
+  <view class="form">
     <view class="inputRow">
       <label>原密码:</label>
-      <input type="password" />
+      <input bindblur="blurPrePwd" type="password" />
     </view>
     <view class="inputRow">
       <label>新密码:</label>
-      <input type="password" />
+      <input bindblur="blurNewPwd" type="password" />
     </view>
     <view class="inputRow">
       <label>确认密码:</label>
-      <input type="password" />
+      <input bindinput="surePwd" type="password" />
     </view>
-    <button>确认修改</button>
-  </form>
+    <button disabled="{{isBtnVisibel}}" bindtap="modifyPwdBtn">确认修改</button>
+  </view>
 </view>

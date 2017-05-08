@@ -13,7 +13,7 @@
     font-size: 12pt;
 }
 
-form {
+.form {
 padding: 10rpx 20rpx 0 20rpx;
 }
 .inputRow {
