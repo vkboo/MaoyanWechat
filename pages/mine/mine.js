@@ -31,7 +31,7 @@ Page({
     imgPaths: []
   },
   onLoad: function (options) {
-      this.getData();
+    this.getData();
   },
   onReady: function () {
     // 页面渲染完成
@@ -45,6 +45,11 @@ Page({
   },
   onUnload: function () {
     // 页面关闭
+    orders = [];
+    g_cinemaIndexArr = [];
+    g_roomIndexArr = [];
+    xArr = [];
+    yArr = [];
   },
   getData: function () {
     // 取得用户_id

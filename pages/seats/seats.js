@@ -29,11 +29,6 @@ Page({
     isBtnDisable: true
   },
   onLoad: function (options) {
-    // var options = {
-    //   id: '590c237beeab3e1114c8a29b',
-    //   cinemaIndex: '1',
-    //   roomIndex: '1'
-    // }
     // 将options中的字符串数组改成数字
     console.log('seats接受的数据', options)
     var cinemaIndex = Number(options.cinemaIndex);
@@ -53,6 +48,20 @@ Page({
   },
   onUnload: function () {
     // 页面关闭
+    g_cinemaIndex = 0;
+    g_roomIndex = 0;
+    g_rowArr = [];
+    g_colArr = [];
+    seatArr = [];
+    priceUnit = 0;
+    priceTotal = 0;
+    matchId = 0;
+    seatInfo = '';
+    seatsArrCode = [];
+    innerIndex = 0;
+    outterIndex = 0;
+    g_indexImgPath = '',
+    g_cinemasNow = ''
   },
   // 得到当前页所需的在match表中的数据,并渲染
   getData: function (id, cinemaIndex, roomIndex) {
