@@ -16,13 +16,13 @@
         <view wx:key="{{d_item.name}}" wx:for="{{orders}}" class="order-item">
             <text class="cinemaName">{{item.cinemaName}}</text>
             <view class="main">
-                <!--<image src="http://127.0.0.1/images/{{pathArr[index]}}"></image>-->
+                <image src="http://127.0.0.1:3000/images/{{imgPaths[index]}}"></image>
                 <view class="content">
                     <text class="fname">{{item.name}}</text>
                     <text class="ftime">{{item.time}}</text>
                     <text class="fseat">{{item.roomName}} {{item.seats}}</text>
                 </view>
-                <button class="cancel">取消订单</button>
+                <button data-orderid="{{item._id}}" data-matchid="{{item.matchId}}" bindtap="cancelEvent" data-index="{{index}}" data-x="{{item.x}}" data-y="{{item.y}}" data-roomIndex="{{item.roomIndex}}" data-cinemaIndex="{{item.cinemaIndex}}" class="cancel">取消订单</button>
             </view>
             <text class="totalPrice">总价：{{item.price}}元</text>
         </view>

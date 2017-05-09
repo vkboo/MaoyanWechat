@@ -1,18 +1,18 @@
 var app = getApp();
 // 演员格式化以逗号分隔
-var formatActors = function(allData) {
-    var actorsArr = [];
-    for (let i = 0; i < allData.length; i++) {
-      actorsArr.push(allData[i].actors.split('|').join(','));
-    }
-    return actorsArr;
+var formatActors = function (allData) {
+  var actorsArr = [];
+  for (let i = 0; i < allData.length; i++) {
+    actorsArr.push(allData[i].actors.split('|').join(','));
+  }
+  return actorsArr;
 }
 Page({
   data: {
     imgUrls: [
-      "../images/banner1.png",
-      "../images/banner2.png",
-      "../images/banner3.png"
+      "../images/bj1.jpg",
+      "../images/bj2.jpg",
+      "../images/bj3.jpg",
     ],
     indicatorDots: true,
     autoplay: true,

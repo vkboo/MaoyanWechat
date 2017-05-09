@@ -32,6 +32,7 @@
 }
 
 .level {
+  width: 111rpx;
   font-size: 10pt;
   padding: 0 15rpx;
   border: 1rpx solid #fff;

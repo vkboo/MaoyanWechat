@@ -5,6 +5,10 @@ var priceTotal = 0; // 总价
 var matchId = '';
 var seatInfo; // 现场座位信息
 var seatsArrCode; // 代码中的座位二位数组
+var innerIndex; // 内层索引
+var outterIndex; // 外层索引
+var g_indexImgPath; // 首页图片，传到“我的”使用
+
 
 var g_cinemasNow; // 当前修改的match中的cinemas字段数据，用于后面更新
 var g_cinemaIndex;
@@ -59,6 +63,7 @@ Page({
       method: 'POST',
       success: (res) => {
         var match = res.data;
+        g_indexImgPath = match.indexImg;
         this.setData({
           filmName: match.name,
           cinemaName: match.cinemas[cinemaIndex].cinema.name,
@@ -78,9 +83,9 @@ Page({
     // 座位标识（可选或已选）
     var flag = e.currentTarget.dataset.flag;
     // 二位数组索引(里层)
-    var innerIndex = e.currentTarget.dataset.innerindex;
+    innerIndex = e.currentTarget.dataset.innerindex;
     // 二位数组索引(外层)
-    var outterIndex = e.currentTarget.dataset.outterindex;
+    outterIndex = e.currentTarget.dataset.outterindex;
     if (flag == 1) {
       // 最多只能买3张票
       if (seatArr.length == 5) {
@@ -188,7 +193,12 @@ Page({
           price: this.data.price,
           userId: res.data,
           seats: seatArr, // 现场座位信息
-          seatsCode: seatsArrCode // 代码中的座位数组
+          seatsCode: seatsArrCode, // 代码中的座位数组
+          cinemaIndex: g_cinemaIndex,
+          roomIndex: g_roomIndex,
+          x: outterIndex,
+          y: innerIndex,
+          indexImgPath: g_indexImgPath
         }
         wx.request({
           url: 'http://127.0.0.1:3000/orders/add',

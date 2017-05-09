@@ -1,11 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-     "pages/seats/seats",
+    "pages/seats/seats",
     "pages/mine/mine",
-   
-    
-    
     "pages/modifypwd/modifypwd",
     "pages/login/login",
     "pages/rooms/rooms",
@@ -31,18 +28,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "电影",
-        "iconPath": "pages/images/index-selected.png",
-        "selectedIconPath": "pages/images/index-selected.png"
+        "iconPath": "pages/images/dianying2.png",
+        "selectedIconPath": "pages/images/dianying1.png"
       },
       {
         "pagePath": "pages/cinemas/cinemas",
         "text": "影院",
-        "iconPath": "pages/images/cinemas-unselecte.png"
+        "iconPath": "pages/images/yingyuan2.png",
+        "selectedIconPath": "pages/images/yingyuan1.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "pages/images/mine-unselecte.png"
+        "iconPath": "pages/images/wode2.png",
+        "selectedIconPath": "pages/images/wode1.png"
       }
     ]
   }
