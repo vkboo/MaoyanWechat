@@ -204,15 +204,15 @@ Page({
           url: 'http://127.0.0.1:3000/orders/add',
           data: order,
           method: 'POST',
-          success: function (res) {
+          success: (res) => {
             wx.showToast({
               title: "购买成功，您可以去“我的”查看您的订单",
               icon: 'success',
               duration: 2000
             });
-            setTimeout(function () {
-              wx.reLaunch({
-                url: 'pages/index/index'
+            setTimeout(() => {
+              wx.switchTab({
+                url: '/pages/index/index'
               })
             }, 1500)
           }

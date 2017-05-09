@@ -7,18 +7,18 @@ var xArr;
 var yArr;
 
 var g_seatsCodeArr = []; // 代码中本订单的数组的数组
-var joinSeatArr = function(arr) {
+var joinSeatArr = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     g_seatsCodeArr.push(arr[i].seatsCode);
   }
 }
 
-var formatImgPath = function(arr) {
+var formatImgPath = function (arr) {
   var imgPathArr = [];
   for (let i = 0; i < arr.length; i++) {
-    var path = arr[i].indexImgPath; 
+    var path = arr[i].indexImgPath;
     var index = path.indexOf('\\');
-    var newPath = path.slice(index + 1,path.length);
+    var newPath = path.slice(index + 1, path.length);
     imgPathArr.push(newPath);
   }
   return imgPathArr;
@@ -31,6 +31,22 @@ Page({
     imgPaths: []
   },
   onLoad: function (options) {
+      this.getData();
+  },
+  onReady: function () {
+    // 页面渲染完成
+  },
+  onShow: function () {
+    // 页面显示
+    this.getData();
+  },
+  onHide: function () {
+    // 页面隐藏
+  },
+  onUnload: function () {
+    // 页面关闭
+  },
+  getData: function () {
     // 取得用户_id
     wx.getStorage({
       key: 'user',
@@ -65,18 +81,6 @@ Page({
         })
       }
     })
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
   },
   // 进入修改密码页
   modifyPwd: function () {
@@ -120,31 +124,31 @@ Page({
     // 整合新数组
 
     // 更新match表中的房间数组
-    console.log(x,y,cinemaIndex,roomIndex)
-     wx.request({
-       url: 'http://127.0.0.1:3000/match/find',
-       data: {_id: matchId},
-       success: function(res){
-          var seatAry = g_seatsCodeArr[index]
-          for (let i = 0; i < seatAry.length; i++) {
-            for (let j = 0; j < seatAry[i].length; j++) {
-              if (seatAry[i][j] == 2) {
-                seatAry[i][j] = 1;
-              }
+    console.log(x, y, cinemaIndex, roomIndex)
+    wx.request({
+      url: 'http://127.0.0.1:3000/match/find',
+      data: { _id: matchId },
+      success: function (res) {
+        var seatAry = g_seatsCodeArr[index]
+        for (let i = 0; i < seatAry.length; i++) {
+          for (let j = 0; j < seatAry[i].length; j++) {
+            if (seatAry[i][j] == 2) {
+              seatAry[i][j] = 1;
             }
           }
-          var cinemas = res.data.cinemas;
-          cinemas[cinemaIndex].rooms[roomIndex].seat = JSON.stringify(seatAry);
+        }
+        var cinemas = res.data.cinemas;
+        cinemas[cinemaIndex].rooms[roomIndex].seat = JSON.stringify(seatAry);
 
-          wx.request({
-            url: 'http://127.0.0.1:3000/match/update',
-            data: {_id: matchId,cinemas: cinemas},
-            method: 'GET', 
-            success: function(res){
-              console.log('match中的数组更新成功')
-            }
-          })
-       }
-     })
+        wx.request({
+          url: 'http://127.0.0.1:3000/match/update',
+          data: { _id: matchId, cinemas: cinemas },
+          method: 'GET',
+          success: function (res) {
+            console.log('match中的数组更新成功')
+          }
+        })
+      }
+    })
   }
 })
