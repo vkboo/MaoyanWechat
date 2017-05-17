@@ -1,5 +1,5 @@
 // pages/seats/seats.js
-var seatArr = [];
+var seatArr = [];  // 座位的文字预览
 var priceUnit = 0; // 单价
 var priceTotal = 0; // 总价
 var matchId = '';
@@ -30,7 +30,6 @@ Page({
   },
   onLoad: function (options) {
     // 将options中的字符串数组改成数字
-    console.log('seats接受的数据', options)
     var cinemaIndex = Number(options.cinemaIndex);
     var roomIndex = Number(options.roomIndex);
     g_cinemaIndex = cinemaIndex;
@@ -61,7 +60,7 @@ Page({
     innerIndex = 0;
     outterIndex = 0;
     g_indexImgPath = '',
-    g_cinemasNow = ''
+      g_cinemasNow = ''
   },
   // 得到当前页所需的在match表中的数据,并渲染
   getData: function (id, cinemaIndex, roomIndex) {
@@ -95,18 +94,35 @@ Page({
     innerIndex = e.currentTarget.dataset.innerindex;
     // 二位数组索引(外层)
     outterIndex = e.currentTarget.dataset.outterindex;
+    var seatsArr = this.data.seatsArr;
     if (flag == 1) {
       // 最多只能买3张票
       if (seatArr.length == 5) {
+        wx.showToast({
+          title: '最多只能买5张票',
+          duration: 1500
+        })
         return;
       }
       // 点击选座
-      var seatsArr = this.data.seatsArr;
       seatsArr[outterIndex][innerIndex] = 2;
+      // 选座操作时将横纵索引存入数组中
+      g_rowArr.push(outterIndex);
+      g_colArr.push(innerIndex);
     } else if (flag == 2) {
       // 点击取消选座)
-      var seatsArr = this.data.seatsArr;
       seatsArr[outterIndex][innerIndex] = 1;
+      // 取消操作时将横纵索引移出数组
+      for (let i = 0; i < g_rowArr.length; i++) {
+        if (g_rowArr[i] == outterIndex) {
+          for (let j = 0; j < g_colArr.length; j++) {
+              if (g_colArr[j] == innerIndex) {
+                g_rowArr.splice(i,1);
+                g_colArr.splice(j,1);
+              }
+          }
+        }
+      }
     }
     this.setData({
       seatsArr: seatsArr
@@ -127,16 +143,17 @@ Page({
       }
     }
 
-    g_rowArr.push(outterIndex);
-    g_colArr.push(innerIndex);
+
 
     seatInfo = `${row + 1}排${col + 1}座`;
     // 判断选座还是取消选座，移除显示
     var seatIndex = seatArr.indexOf(seatInfo);
     if (seatIndex != -1) {
+      // 移除座位信息
       priceTotal = priceTotal - priceUnit;
       seatArr.splice(seatIndex, 1);
     } else {
+      // 增加座位信息
       priceTotal = priceTotal + priceUnit;
       seatArr.push(seatInfo)
     }
@@ -169,7 +186,7 @@ Page({
   buyEvent: function () {
     // 整合cinemas数据
     console.log(g_cinemasNow, g_cinemaIndex, g_roomIndex)
-    console.log(g_rowArr, g_colArr)
+    console.log('这不是我要的结果',g_rowArr, g_colArr)
     var newSeat = JSON.parse(g_cinemasNow[g_cinemaIndex].rooms[g_roomIndex].seat);
     for (let i = 0; i < g_rowArr.length; i++) {
       newSeat[g_rowArr[i]][g_colArr[i]] = 3

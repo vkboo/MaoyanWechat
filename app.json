@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/mine/mine",
     "pages/index/index",
     "pages/seats/seats",
-    "pages/mine/mine",
+    
     "pages/modifypwd/modifypwd",
     "pages/login/login",
     "pages/rooms/rooms",

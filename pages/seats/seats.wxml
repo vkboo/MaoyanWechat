@@ -25,7 +25,7 @@
   <view class="screen">
     <image class="s-left" src="/pages/images/s-left.png"></image>
     <view class="roomName">
-      IMAX
+      {{roomName}}
     </view>
     <image class="s-right" src="/pages/images/s-right.png"></image>
   </view>
